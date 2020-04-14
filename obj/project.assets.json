@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": []
+  },
+  "packageFolders": {
+    "C:\\Users\\Hallam the 2nd\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Hallam the 2nd\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\RedemptionMusic\\RedemptionMusic.csproj",
+      "projectName": "RedemptionMusic",
+      "projectPath": "C:\\Users\\Hallam the 2nd\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\RedemptionMusic\\RedemptionMusic.csproj",
+      "packagesPath": "C:\\Users\\Hallam the 2nd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hallam the 2nd\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\RedemptionMusic\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Hallam the 2nd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net45": {}
+    }
+  }
+}

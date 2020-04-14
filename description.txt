@@ -1,0 +1,3 @@
+A separate mod for Mod of Redemption, adds the mod's custom music.
+
+There are config options to disable the claimable music, or replace them with royalty-free alternatives, so fights can still feel impactful without hearing vanilla music play.
