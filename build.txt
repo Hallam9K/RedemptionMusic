@@ -1,6 +1,6 @@
 author = Hallam
 
-version = 0.7.9.5.1
+version = 0.7.9.1
 displayName = Mod of Redemption: Music Pack
 homepage = https://forums.terraria.org/index.php?threads/mod-of-redemption.62837/
 hideCode = true
