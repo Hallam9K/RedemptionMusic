@@ -93,11 +93,6 @@ namespace RedemptionMusic
                     music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/SlayerShipMusic");  //add where is the custom music is located
                     priority = MusicPriority.BiomeHigh;
                 }
-                if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneSoulless && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().dreamsong) //this makes the music play only in Custom Biome
-                {
-                    music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/SoullessCaverns");  //add where is the custom music is located
-                    priority = MusicPriority.Event;
-                }
             }
         }
         public override void Load()
