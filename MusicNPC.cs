@@ -25,7 +25,7 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKingChicken");
             }
-            if (npc.type == RedeMod.NPCType("TheKeeper"))
+            if (npc.type == RedeMod.NPCType("TheKeeper") || npc.type == RedeMod.NPCType("TheKeeper_Soulless"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKeeper");
             }
