@@ -176,9 +176,16 @@ namespace RedemptionMusic
             }
             if (npc.type == RedeMod.NPCType("KSEntrance"))
             {
-                if (npc.life <= 10000 && npc.ai[0] >= 580 && !NPC.AnyNPCs(mod.NPCType("SpaceKeeper")))
+                if (npc.life <= 10000 && npc.ai[0] >= 580 && !NPC.AnyNPCs(RedeMod.NPCType("SpaceKeeper")))
                 {
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer2");
+                }
+            }
+            if (npc.type == RedeMod.NPCType("TheWarden"))
+            {
+                if (npc.ai[0] != 5)
+                {
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 }
             }
             if (npc.type == RedeMod.NPCType("Nebuleus") || npc.type == RedeMod.NPCType("NebuleusClone"))
