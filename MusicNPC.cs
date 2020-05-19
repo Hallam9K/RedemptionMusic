@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Redemption;
 using Redemption.NPCs.Bosses.EaglecrestGolem;
+using Redemption.NPCs.Bosses;
 
 namespace RedemptionMusic
 {
@@ -136,11 +137,7 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusic");
             }
-            if (npc.type == RedeMod.NPCType("Blisterface") || npc.type == RedeMod.NPCType("IrradiatedBehemoth") || npc.type == RedeMod.NPCType("MACEProjectHead") || npc.type == RedeMod.NPCType("MACEProjectJaw") || npc.type == RedeMod.NPCType("Stage2ScientistBoss") || npc.type == RedeMod.NPCType("Stage3Scientist"))
-            {
-                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusic");
-            }
-            if (npc.type == RedeMod.NPCType("PZ2BodyCover") || npc.type == RedeMod.NPCType("PZ2Fight") || npc.type == RedeMod.NPCType("PatientZero"))
+            if (npc.type == RedeMod.NPCType("PZ2BodyCover") || npc.type == RedeMod.NPCType("PZ2Fight"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusic2");
             }

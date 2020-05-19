@@ -2,20 +2,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\references\tModLoader.targets" />
   <PropertyGroup>
-    <AssemblyName>Redemption</AssemblyName>
+    <AssemblyName>RedemptionMusic</AssemblyName>
     <TargetFramework>net45</TargetFramework>
     <PlatformTarget>x86</PlatformTarget>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <Target Name="BuildMod" AfterTargets="Build">
     <Exec Command="&quot;$(tMLBuildServerPath)&quot; -build $(ProjectDir) -eac $(TargetPath) -define $(DefineConstants) -unsafe $(AllowUnsafeBlocks)" />
   </Target>
   <ItemGroup>
-    <Reference Include="AchievementLib">
-      <HintPath>..\..\references\mods\AchievementLib_v1.2.2.dll</HintPath>
-    </Reference>
+    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Redemption">
-      <HintPath>..\..\references\mods\Redemption_v0.7.9.dll</HintPath>
+      <HintPath>..\..\references\mods\Redemption_v0.7.9.5.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
