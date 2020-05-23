@@ -78,7 +78,7 @@ namespace RedemptionMusic
                         priority = MusicPriority.Event;
                     }
                 }
-                if (Main.player[Main.myPlayer].active && (Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneXeno || Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneEvilXeno)) //this makes the music play only in Custom Biome
+                if (Main.player[Main.myPlayer].active && (Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneXeno || Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneEvilXeno || Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneEvilXeno2)) //this makes the music play only in Custom Biome
                 {
                     music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/XenoCaves");  //add where is the custom music is located
                     priority = MusicPriority.BiomeHigh;
