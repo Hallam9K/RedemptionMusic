@@ -114,7 +114,7 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod2");
                 }
             }
-            if (npc.type == RedeMod.NPCType("OmegaOblitIdle") || npc.type == RedeMod.NPCType("OmegaOblitDamaged"))
+            if (npc.type == RedeMod.NPCType("OO"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch2");
             }
@@ -176,6 +176,13 @@ namespace RedemptionMusic
                 if (npc.life <= 10000 && npc.ai[0] >= 580 && !NPC.AnyNPCs(RedeMod.NPCType("SpaceKeeper")))
                 {
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer2");
+                }
+            }
+            if (npc.type == RedeMod.NPCType("OO"))
+            {
+                if (npc.ai[0] > 1 && npc.ai[0] < 5)
+                {
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch2");
                 }
             }
             if (npc.type == RedeMod.NPCType("TheWarden"))
