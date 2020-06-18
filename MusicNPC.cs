@@ -26,7 +26,7 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKingChicken");
             }
-            if (npc.type == RedeMod.NPCType("TheKeeper") || npc.type == RedeMod.NPCType("TheKeeper_Soulless"))
+            if (npc.type == RedeMod.NPCType("TheKeeper"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKeeper");
             }
@@ -145,11 +145,6 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/SilentCaverns");
             }
-            if (npc.type == RedeMod.NPCType("TheWarden"))
-            {
-                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
-                npc.modNPC.musicPriority = MusicPriority.BossHigh;
-            }
         }
         public override void PostAI(NPC npc)
         {
@@ -183,13 +178,6 @@ namespace RedemptionMusic
                 if (npc.ai[0] > 1 && npc.ai[0] < 5)
                 {
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch2");
-                }
-            }
-            if (npc.type == RedeMod.NPCType("TheWarden"))
-            {
-                if (npc.ai[0] != 5)
-                {
-                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 }
             }
             if (npc.type == RedeMod.NPCType("Nebuleus") || npc.type == RedeMod.NPCType("NebuleusClone"))
