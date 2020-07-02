@@ -126,7 +126,21 @@ namespace RedemptionMusic
             {
                 if (RedeWorld.downedPatientZero)
                 {
-                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1");
+                    if (RedeConfigClient.Instance.AntiAntti)
+                    {
+                        if (RedeConfigClient.Instance.MusicReplacements)
+                        {
+                            npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1Alt");
+                        }
+                        else
+                        {
+                            npc.modNPC.music = MusicID.PirateInvasion;
+                        }
+                    }
+                    else
+                    {
+                        npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1");
+                    }
                 }
                 else
                 {
