@@ -15,7 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Redemption">
-      <HintPath>..\..\references\mods\Redemption_v0.7.9.5.dll</HintPath>
+      <HintPath>..\..\references\mods\Redemption_v0.8.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

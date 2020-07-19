@@ -78,7 +78,7 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer");
             }
-            if (npc.type == RedeMod.NPCType("Nebuleus") || npc.type == RedeMod.NPCType("NebuleusClone") || npc.type == RedeMod.NPCType("StarWyvernHead"))
+            if (npc.type == RedeMod.NPCType("NebP1") || npc.type == RedeMod.NPCType("Nebuleus") || npc.type == RedeMod.NPCType("NebuleusClone") || npc.type == RedeMod.NPCType("StarWyvernHead"))
             {
                 if (RedeConfigClient.Instance.AntiAntti)
                 {
