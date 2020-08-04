@@ -74,11 +74,11 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossXeno2");
             }
-            if (npc.type == RedeMod.NPCType("KSEntrance") || npc.type == RedeMod.NPCType("KSEntranceClone"))
+            if (npc.type == RedeMod.NPCType("KS3_Body") || npc.type == RedeMod.NPCType("KSEntranceClone"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer");
             }
-            if (npc.type == RedeMod.NPCType("NebP1") || npc.type == RedeMod.NPCType("Nebuleus") || npc.type == RedeMod.NPCType("NebuleusClone") || npc.type == RedeMod.NPCType("StarWyvernHead"))
+            if (npc.type == RedeMod.NPCType("NebP1") || npc.type == RedeMod.NPCType("NebuleusClone") || npc.type == RedeMod.NPCType("StarWyvernHead"))
             {
                 if (RedeConfigClient.Instance.AntiAntti)
                 {
@@ -96,7 +96,7 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod1");
                 }
             }
-            if (npc.type == RedeMod.NPCType("BigNebuleus") || npc.type == RedeMod.NPCType("BigNebuleusClone"))
+            if (npc.type == RedeMod.NPCType("NebP2") || npc.type == RedeMod.NPCType("BigNebuleusClone"))
             {
                 if (RedeConfigClient.Instance.AntiAntti)
                 {
@@ -185,11 +185,11 @@ namespace RedemptionMusic
                     }
                 }
             }
-            if (npc.type == RedeMod.NPCType("KSEntrance"))
+            if (npc.type == RedeMod.NPCType("KSStart"))
             {
-                if (npc.life <= 10000 && npc.ai[0] >= 580 && !NPC.AnyNPCs(RedeMod.NPCType("SpaceKeeper")))
+                if (npc.ai[0] == 4)
                 {
-                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer2");
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer");
                 }
             }
             if (npc.type == RedeMod.NPCType("OO"))
@@ -206,9 +206,9 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 }
             }
-            if (npc.type == RedeMod.NPCType("Nebuleus") || npc.type == RedeMod.NPCType("NebuleusClone"))
+            if (npc.type == RedeMod.NPCType("NebP1") || npc.type == RedeMod.NPCType("NebuleusClone"))
             {
-                if (Main.expertMode && npc.life <= (int)(npc.lifeMax * 0.07f) && (RedeConfigClient.Instance.NoBossText || npc.type == RedeMod.NPCType("NebuleusClone") ? npc.ai[3] >= 0 : npc.ai[3] >= 400))
+                if (npc.ai[0] == 10)
                 {
                     if (RedeConfigClient.Instance.AntiAntti)
                     {
