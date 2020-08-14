@@ -192,6 +192,13 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer");
                 }
             }
+            if (npc.type == RedeMod.NPCType("KS3_Body"))
+            {
+                if (npc.ai[0] == 13 && npc.ai[2] >= 30)
+                {
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer2");
+                }
+            }
             if (npc.type == RedeMod.NPCType("OO"))
             {
                 if (npc.ai[0] > 1 && npc.ai[0] < 5)
@@ -227,6 +234,18 @@ namespace RedemptionMusic
                     }
                 }
             }
+        }
+        public override bool StrikeNPC(NPC npc, ref double damage, int defense, ref float knockback, int hitDirection, ref bool crit)
+        {
+            Mod RedeMod = ModLoader.GetMod("Redemption");
+            if (npc.type == RedeMod.NPCType("KS3_Body"))
+            {
+                if (damage <= 0.6f)
+                {
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer2");
+                }
+            }
+            return base.StrikeNPC(npc, ref damage, defense, ref knockback, hitDirection, ref crit);
         }
     }
 }
