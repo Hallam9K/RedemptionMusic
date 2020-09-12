@@ -74,11 +74,11 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossXeno2");
             }
-            if (npc.type == RedeMod.NPCType("KS3_Body") || npc.type == RedeMod.NPCType("KSEntranceClone"))
+            if (npc.type == RedeMod.NPCType("KS3_Body") || npc.type == RedeMod.NPCType("KS3_Body_Clone"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer");
             }
-            if (npc.type == RedeMod.NPCType("NebP1") || npc.type == RedeMod.NPCType("NebuleusClone") || npc.type == RedeMod.NPCType("StarWyvernHead"))
+            if (npc.type == RedeMod.NPCType("NebP1") || npc.type == RedeMod.NPCType("NebP1_Clone") || npc.type == RedeMod.NPCType("StarWyvernHead"))
             {
                 if (RedeConfigClient.Instance.AntiAntti)
                 {
@@ -96,7 +96,7 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod1");
                 }
             }
-            if (npc.type == RedeMod.NPCType("NebP2") || npc.type == RedeMod.NPCType("BigNebuleusClone"))
+            if (npc.type == RedeMod.NPCType("NebP2") || npc.type == RedeMod.NPCType("NebP2_Clone"))
             {
                 if (RedeConfigClient.Instance.AntiAntti)
                 {
@@ -147,9 +147,21 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKingChicken");
                 }
             }
-            if (npc.type == RedeMod.NPCType("Blisterface2") || npc.type == RedeMod.NPCType("IrradiatedBehemoth2") || npc.type == RedeMod.NPCType("JanitorBot") || npc.type == RedeMod.NPCType("MACEProjectHeadA") || npc.type == RedeMod.NPCType("MACEProjectJawA") || npc.type == RedeMod.NPCType("Stage3Scientist2") || npc.type == RedeMod.NPCType("TbotMiniboss"))
+            if (npc.type == RedeMod.NPCType("Blisterface2") || npc.type == RedeMod.NPCType("JanitorBot") || npc.type == RedeMod.NPCType("TbotMiniboss"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusic");
+            }
+            if (npc.type == RedeMod.NPCType("IrradiatedBehemoth2"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicIB");
+            }
+            if (npc.type == RedeMod.NPCType("MACEProjectHeadA") || npc.type == RedeMod.NPCType("MACEProjectJawA"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicMP");
+            }
+            if (npc.type == RedeMod.NPCType("Stage3Scientist2"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicIS");
             }
             if (npc.type == RedeMod.NPCType("PZ2BodyCover") || npc.type == RedeMod.NPCType("PZ2Fight"))
             {
@@ -213,7 +225,7 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 }
             }
-            if (npc.type == RedeMod.NPCType("NebP1") || npc.type == RedeMod.NPCType("NebuleusClone"))
+            if (npc.type == RedeMod.NPCType("NebP1"))
             {
                 if (npc.ai[0] == 10)
                 {
