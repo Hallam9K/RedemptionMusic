@@ -30,9 +30,13 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKeeper");
             }
-            if (npc.type == RedeMod.NPCType("VlitchCleaver") || npc.type == RedeMod.NPCType("VlitchCore1") || npc.type == RedeMod.NPCType("VlitchCore2") || npc.type == RedeMod.NPCType("VlitchCore3") || npc.type == RedeMod.NPCType("VlitchWormHead"))
+            if (npc.type == RedeMod.NPCType("VlitchCleaver"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch1");
+            }
+            if (npc.type == RedeMod.NPCType("VlitchCore1") || npc.type == RedeMod.NPCType("VlitchCore2") || npc.type == RedeMod.NPCType("VlitchCore3") || npc.type == RedeMod.NPCType("VlitchWormHead"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch1G");
             }
             if (npc.type == RedeMod.NPCType("EaglecrestGolem") || npc.type == RedeMod.NPCType("EaglecrestGolemPZ") || npc.type == RedeMod.NPCType("Thorn") || npc.type == RedeMod.NPCType("ThornPZ"))
             {
