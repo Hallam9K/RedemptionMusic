@@ -180,6 +180,10 @@ namespace RedemptionMusic
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 npc.modNPC.musicPriority = MusicPriority.BossHigh;
             }
+            if (npc.type == RedeMod.NPCType("AncientAutomation"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/EpicBattle");
+            }
         }
         public override void PostAI(NPC npc)
         {
