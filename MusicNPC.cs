@@ -180,7 +180,7 @@ namespace RedemptionMusic
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 npc.modNPC.musicPriority = MusicPriority.BossHigh;
             }
-            if (npc.type == RedeMod.NPCType("AncientAutomation"))
+            if (npc.type == RedeMod.NPCType("AncientAutomaton"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/EpicBattle");
             }
