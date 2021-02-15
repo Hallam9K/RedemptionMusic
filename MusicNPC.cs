@@ -175,7 +175,7 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/SilentCaverns");
             }
-            if (npc.type == RedeMod.NPCType("TheWarden"))
+            if (npc.type == RedeMod.NPCType("WardenIdle"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 npc.modNPC.musicPriority = MusicPriority.BossHigh;
