@@ -184,6 +184,10 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/EpicBattle");
             }
+            if (npc.type == RedeMod.NPCType("OSStart") || npc.type == RedeMod.NPCType("OS_Body_Idle"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayerRemix");
+            }
         }
         public override void PostAI(NPC npc)
         {

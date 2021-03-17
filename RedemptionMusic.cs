@@ -80,27 +80,35 @@ namespace RedemptionMusic
                 }
                 if (Main.player[Main.myPlayer].active && (Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneXeno || Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneEvilXeno || Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneEvilXeno2)) //this makes the music play only in Custom Biome
                 {
-                    music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/XenoCaves");  //add where is the custom music is located
+                    music = GetSoundSlot(SoundType.Music, "Sounds/Music/XenoCaves");  //add where is the custom music is located
                     priority = MusicPriority.BiomeHigh;
                 }
                 if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneLab) //this makes the music play only in Custom Biome
                 {
-                    music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/LabMusic");  //add where is the custom music is located
+                    music = GetSoundSlot(SoundType.Music, "Sounds/Music/LabMusic");  //add where is the custom music is located
                     priority = MusicPriority.BiomeHigh;
                 }
                 if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneSlayer && RedeWorld.downedSlayer) //this makes the music play only in Custom Biome
                 {
-                    music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/SlayerShipMusic");  //add where is the custom music is located
+                    music = GetSoundSlot(SoundType.Music, "Sounds/Music/SlayerShipMusic");  //add where is the custom music is located
                     priority = MusicPriority.BiomeHigh;
                 }
-                if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneSoulless && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().dreamsong) //this makes the music play only in Custom Biome
+                if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneSoulless)
                 {
-                    music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/SoullessCaverns");  //add where is the custom music is located
-                    priority = MusicPriority.Event;
+                    if (Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().dreamsong)
+                    {
+                        music = GetSoundSlot(SoundType.Music, "Sounds/Music/SoullessCaverns");
+                    }
+                    else
+                    {
+                        music = GetSoundSlot(SoundType.Music, "Sounds/Music/SoullessCaverns2");
+                    }
+
+                    priority = MusicPriority.Environment;
                 }
-                if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneRuinedKingdom) //this makes the music play only in Custom Biome
+                if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneRuinedKingdom)
                 {
-                    music = this.GetSoundSlot(SoundType.Music, "Sounds/Music/RuinedKingdom");  //add where is the custom music is located
+                    music = GetSoundSlot(SoundType.Music, "Sounds/Music/RuinedKingdom");
                     priority = MusicPriority.BiomeHigh;
                 }
             }
