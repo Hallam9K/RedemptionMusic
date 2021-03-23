@@ -121,7 +121,6 @@ namespace RedemptionMusic
             {
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/XenoCaves"), RedeMod.ItemType("WastelandBox"), RedeMod.TileType("WastelandBoxTile"));
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/BossXeno1"), RedeMod.ItemType("XenomiteCrystalBox"), RedeMod.TileType("XenomiteCrystalBoxTile"));
-                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/BossXeno2"), RedeMod.ItemType("InfectedEyeBox"), RedeMod.TileType("InfectedEyeBoxTile"));
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer"), RedeMod.ItemType("KSBox"), RedeMod.TileType("KSBoxTile"));
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch1"), RedeMod.ItemType("VlitchBox"), RedeMod.TileType("VlitchBoxTile"));
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/BossKeeper"), RedeMod.ItemType("KeeperBox"), RedeMod.TileType("KeeperBoxTile"));

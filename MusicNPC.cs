@@ -74,10 +74,6 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossForest2");
                 }
             }
-            if (npc.type == RedeMod.NPCType("InfectedEye"))
-            {
-                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossXeno2");
-            }
             if (npc.type == RedeMod.NPCType("KS3_Body") || npc.type == RedeMod.NPCType("KS3_Body_Clone"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayer");
@@ -230,9 +226,9 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch2");
                 }
             }
-            if (npc.type == RedeMod.NPCType("TheWarden"))
+            if (npc.type == RedeMod.NPCType("WardenIdle"))
             {
-                if (npc.ai[0] != 5)
+                if (npc.ai[0] < 20)
                 {
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 }
