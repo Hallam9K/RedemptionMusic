@@ -109,7 +109,7 @@ namespace RedemptionMusic
                 if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneRuinedKingdom)
                 {
                     music = GetSoundSlot(SoundType.Music, "Sounds/Music/RuinedKingdom");
-                    priority = MusicPriority.BiomeHigh;
+                    priority = MusicPriority.Environment;
                 }
             }
         }
