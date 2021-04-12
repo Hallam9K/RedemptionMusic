@@ -26,7 +26,7 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKingChicken");
             }
-            if (npc.type == RedeMod.NPCType("TheKeeper") || npc.type == RedeMod.NPCType("TheKeeper_Soulless"))
+            if (npc.type == RedeMod.NPCType("TheKeeper"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKeeper");
             }
@@ -96,24 +96,6 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod1");
                 }
             }
-            if (npc.type == RedeMod.NPCType("NebP2") || npc.type == RedeMod.NPCType("NebP2_Clone"))
-            {
-                if (RedeConfigClient.Instance.AntiAntti)
-                {
-                    if (RedeConfigClient.Instance.MusicReplacements)
-                    {
-                        npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Irregular");
-                    }
-                    else
-                    {
-                        npc.modNPC.music = MusicID.LunarBoss;
-                    }
-                }
-                else
-                {
-                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod2");
-                }
-            }
             if (npc.type == RedeMod.NPCType("OO"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch2");
@@ -171,19 +153,6 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/SilentCaverns");
             }
-            if (npc.type == RedeMod.NPCType("WardenIdle"))
-            {
-                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
-                npc.modNPC.musicPriority = MusicPriority.BossHigh;
-            }
-            if (npc.type == RedeMod.NPCType("AncientAutomaton"))
-            {
-                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/EpicBattle");
-            }
-            if (npc.type == RedeMod.NPCType("OSStart") || npc.type == RedeMod.NPCType("OS_Body_Idle"))
-            {
-                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSlayerRemix");
-            }
         }
         public override void PostAI(NPC npc)
         {
@@ -224,13 +193,6 @@ namespace RedemptionMusic
                 if (npc.ai[0] > 1 && npc.ai[0] < 5)
                 {
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch2");
-                }
-            }
-            if (npc.type == RedeMod.NPCType("WardenIdle"))
-            {
-                if (npc.ai[0] < 20)
-                {
-                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 }
             }
             if (npc.type == RedeMod.NPCType("NebP1"))
