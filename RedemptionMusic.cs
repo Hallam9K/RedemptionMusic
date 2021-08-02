@@ -106,10 +106,18 @@ namespace RedemptionMusic
 
                     priority = MusicPriority.Environment;
                 }
-                if (Main.player[Main.myPlayer].active && Main.player[Main.myPlayer].GetModPlayer<RedePlayer>().ZoneRuinedKingdom)
+                if (player.active && player.GetModPlayer<RedePlayer>().ZoneRuinedKingdom)
                 {
-                    music = GetSoundSlot(SoundType.Music, "Sounds/Music/RuinedKingdom");
-                    priority = MusicPriority.Environment;
+                    if (player.Hitbox.Intersects(ArenaPlayer.keepArea1) || player.Hitbox.Intersects(ArenaPlayer.keepArea2))
+                    {
+                        music = GetSoundSlot(SoundType.Music, "Sounds/Music/RuinedKingdomKeep");
+                        priority = MusicPriority.Environment;
+                    }
+                    else
+                    {
+                        music = GetSoundSlot(SoundType.Music, "Sounds/Music/RuinedKingdom");
+                        priority = MusicPriority.Environment;
+                    }
                 }
             }
         }
