@@ -82,6 +82,24 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod1");
             }
+            if (npc.type == RedeMod.NPCType("NebP2") || npc.type == RedeMod.NPCType("NebP2_Clone"))
+            {
+                if (RedeConfigClient.Instance.AntiAntti)
+                {
+                    if (RedeConfigClient.Instance.MusicReplacements)
+                    {
+                        npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Irregular");
+                    }
+                    else
+                    {
+                        npc.modNPC.music = MusicID.LunarBoss;
+                    }
+                }
+                else
+                {
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod2");
+                }
+            }
             if (npc.type == RedeMod.NPCType("OO"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch2");
