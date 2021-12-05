@@ -53,24 +53,8 @@ namespace RedemptionMusic
                 {
                     if (RedeWorld.downedPatientZero)
                     {
-                        if (RedeConfigClient.Instance.AntiAntti)
-                        {
-                            if (RedeConfigClient.Instance.MusicReplacements)
-                            {
-                                music = GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1Alt");
-                                priority = MusicPriority.Event;
-                            }
-                            else
-                            {
-                                music = MusicID.PirateInvasion;
-                                priority = MusicPriority.Event;
-                            }
-                        }
-                        else
-                        {
-                            music = GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1");
-                            priority = MusicPriority.Event;
-                        }
+                        music = GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1");
+                        priority = MusicPriority.Event;
                     }
                     else
                     {

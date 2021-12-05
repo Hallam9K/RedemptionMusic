@@ -26,7 +26,7 @@ namespace RedemptionMusic
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKingChicken");
             }
-            if (npc.type == RedeMod.NPCType("Keeper"))
+            if (npc.type == RedeMod.NPCType("Keeper") || npc.type == RedeMod.NPCType("KeeperSpirit"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKeeper");
             }
@@ -84,21 +84,7 @@ namespace RedemptionMusic
             }
             if (npc.type == RedeMod.NPCType("NebP2") || npc.type == RedeMod.NPCType("NebP2_Clone"))
             {
-                if (RedeConfigClient.Instance.AntiAntti)
-                {
-                    if (RedeConfigClient.Instance.MusicReplacements)
-                    {
-                        npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Irregular");
-                    }
-                    else
-                    {
-                        npc.modNPC.music = MusicID.LunarBoss;
-                    }
-                }
-                else
-                {
-                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod2");
-                }
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod2");
             }
             if (npc.type == RedeMod.NPCType("OO"))
             {
@@ -112,42 +98,20 @@ namespace RedemptionMusic
             {
                 if (RedeWorld.downedPatientZero)
                 {
-                    if (RedeConfigClient.Instance.AntiAntti)
-                    {
-                        if (RedeConfigClient.Instance.MusicReplacements)
-                        {
-                            npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1Alt");
-                        }
-                        else
-                        {
-                            npc.modNPC.music = MusicID.PirateInvasion;
-                        }
-                    }
-                    else
-                    {
-                        npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1");
-                    }
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/ChickenInvasion1");
                 }
                 else
                 {
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKingChicken");
                 }
             }
-            if (npc.type == RedeMod.NPCType("Blisterface2") || npc.type == RedeMod.NPCType("JanitorBot") || npc.type == RedeMod.NPCType("TbotMiniboss"))
+            if (npc.type == RedeMod.NPCType("Blisterface2") || npc.type == RedeMod.NPCType("JanitorBot") || npc.type == RedeMod.NPCType("TbotMiniboss") || npc.type == RedeMod.NPCType("Stage3Scientist2") || npc.type == RedeMod.NPCType("IrradiatedBehemoth2"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusic");
-            }
-            if (npc.type == RedeMod.NPCType("IrradiatedBehemoth2"))
-            {
-                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicIB");
             }
             if (npc.type == RedeMod.NPCType("MACEProjectHeadA") || npc.type == RedeMod.NPCType("MACEProjectJawA"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicMP");
-            }
-            if (npc.type == RedeMod.NPCType("Stage3Scientist2"))
-            {
-                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicIS");
             }
             if (npc.type == RedeMod.NPCType("PZ2BodyCover") || npc.type == RedeMod.NPCType("PZ2Fight"))
             {
@@ -203,21 +167,7 @@ namespace RedemptionMusic
             {
                 if (npc.ai[0] == 10)
                 {
-                    if (RedeConfigClient.Instance.AntiAntti)
-                    {
-                        if (RedeConfigClient.Instance.MusicReplacements)
-                        {
-                            npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Irregular");
-                        }
-                        else
-                        {
-                            npc.modNPC.music = MusicID.LunarBoss;
-                        }
-                    }
-                    else
-                    {
-                        npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod2");
-                    }
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossStarGod2");
                 }
             }
         }
