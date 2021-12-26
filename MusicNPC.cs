@@ -105,13 +105,21 @@ namespace RedemptionMusic
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossKingChicken");
                 }
             }
-            if (npc.type == RedeMod.NPCType("Blisterface2") || npc.type == RedeMod.NPCType("JanitorBot") || npc.type == RedeMod.NPCType("TbotMiniboss") || npc.type == RedeMod.NPCType("Stage3Scientist2") || npc.type == RedeMod.NPCType("IrradiatedBehemoth2"))
+            if (npc.type == RedeMod.NPCType("Blisterface2") || npc.type == RedeMod.NPCType("JanitorBot") || npc.type == RedeMod.NPCType("TbotMiniboss"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusic");
+            }
+            if (npc.type == RedeMod.NPCType("IrradiatedBehemoth2"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicIB");
             }
             if (npc.type == RedeMod.NPCType("MACEProjectHeadA") || npc.type == RedeMod.NPCType("MACEProjectJawA"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicMP");
+            }
+            if (npc.type == RedeMod.NPCType("Stage3Scientist2"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LabBossMusicIS");
             }
             if (npc.type == RedeMod.NPCType("PZ2BodyCover") || npc.type == RedeMod.NPCType("PZ2Fight"))
             {
@@ -120,6 +128,11 @@ namespace RedemptionMusic
             if (npc.type == RedeMod.NPCType("SkullDigger"))
             {
                 npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/SilentCaverns");
+            }
+            if (npc.type == RedeMod.NPCType("WardenIdle"))
+            {
+                npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
+                npc.modNPC.musicPriority = MusicPriority.BossHigh;
             }
         }
         public override void PostAI(NPC npc)
@@ -161,6 +174,13 @@ namespace RedemptionMusic
                 if (npc.ai[0] > 1 && npc.ai[0] < 5)
                 {
                     npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossVlitch2");
+                }
+            }
+            if (npc.type == RedeMod.NPCType("WardenIdle"))
+            {
+                if (npc.ai[0] < 20)
+                {
+                    npc.modNPC.music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/BossSoulless");
                 }
             }
             if (npc.type == RedeMod.NPCType("NebP1"))
